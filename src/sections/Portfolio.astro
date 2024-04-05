@@ -1,0 +1,82 @@
+---
+import { Image } from "astro:assets"
+import site1 from "../img/portfolio/site1.png"
+import site2 from "../img/portfolio/site2.png"
+import site3 from "../img/portfolio/site3.png"
+import site4 from "../img/portfolio/site4.png"
+---
+<section id="portfolio">
+    <div class="container">
+        <h2>Наши работы</h2>
+        <div class="cards">
+            <div class="card">
+                <a href="">
+                    <Image src={site1} alt="site1"/>
+                </a>
+            </div>
+            <div class="card">
+                <a href="">
+                    <Image src={site2} alt="site2"/>
+                </a>
+            </div>
+            <div class="card">
+                <a href="">
+                    <Image src={site3} alt="site3"/>
+                </a>
+            </div>
+            <div class="card">
+                <a href="">
+                    <Image src={site4} alt="site4"/>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.cards {
+    /* display: flex;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 1px;
+
+
+
+  
+}
+.card {
+    /* flex-basis: 50%; */
+    aspect-ratio: 16/9;
+    border: medium solid var( --c-shadow);
+    border-radius: 20px;
+    overflow: hidden;
+    & a {
+        display: block;
+        width: 100%;
+        height: 100%
+    }
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+
+    }
+}
+section {
+padding-block:80px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+</style>

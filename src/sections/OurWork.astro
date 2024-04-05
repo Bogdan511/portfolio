@@ -1,0 +1,59 @@
+---
+import { Image } from "astro:assets"
+import pic  from "../img/background/pic.svg"
+---
+<section id="work">
+    <div class="container">
+        <div class="body">
+            <h2>Что мы делаем?</h2>
+            <div class="text-block">
+                <p>Обращаясь к нам, вы можете рассчитывать на создание отличного сайта. В наши услуги входит полный цикл разработки сайта. Мы поможем вам создать дизайн сайта и подготовим необходимые исходники. Далее происходит верстка и написание логики сайта. Дальше сайт поступает в ваше распоряжение и вы используете его по своему усмотрению. При возникновении потребности, мы можем осуществлять поддержку сайта и его сопровождение, в течении всего жизнного цикла.</p>
+            </div>
+        </div>
+        <div class="img-block">
+            <Image class="img" src={pic} alt="decoration" />
+        </div>
+    </div>
+</section>
+<style>
+    section{
+        padding: 4rem 0;
+        position: relative;
+        z-index: 0;
+    }
+    section::after {
+        --tr:67%;
+        position: absolute;
+        inset: 0;
+        content: "";
+        background: linear-gradient(
+            5deg, 
+            var(--c-gradient1) 10%,
+            var(--c-gradient2) var(--tr),
+            transparent var(--tr),
+            transparent 100%
+
+            );
+        z-index: -1;
+        
+    }
+    .container {
+        display: flex;
+        gap: 1rem;
+    }
+    .container>*{
+        flex: 1 1 50%;
+    } 
+    .text-block {
+        background-color: white;
+       box-shadow:0.5rem 0.5rem var(--c-shadow);
+        padding: 1rem;
+        border-radius: 1rem;
+
+    }
+    .img {
+        object-fit: contain;
+        max-width: 100%;
+        height: auto;
+    }
+</style>

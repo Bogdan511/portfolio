@@ -1,0 +1,6 @@
+:root {
+    --basic-color: 36deg;
+    --c-gradient1: hsl(var(--basic-color) 90% 52%);
+    --c-gradient2: hsl(var(--basic-color) 90% 80%);
+    --c-shadow: hsl(var(--basic-color) 90% 30%);
+}

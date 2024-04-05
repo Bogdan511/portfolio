@@ -1,0 +1,40 @@
+---
+const { src, alt, title, text } = Astro.props;
+---
+
+<article>
+    <img {src} {alt} />
+    <h3>{title}</h3>
+    <hr>
+    <p>{text}</p>
+</article>
+
+<style>
+    article {
+        background-color: white;
+        padding: 1rem;
+        border-radius: 1rem;
+        border: medium solid var(--c-gradient2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        min-height:400px ;
+    }
+    img {
+        height: 200px;
+        width: auto;
+
+    }
+    hr {
+        border: none;
+        height: 2px;
+        max-width: 150px;
+        width: 100%;
+        background-color: var( --c-gradient1);
+        border-radius: 1px;
+    }
+    p {
+        text-align: center;
+    }
+</style>

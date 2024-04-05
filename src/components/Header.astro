@@ -1,0 +1,35 @@
+---
+import SiteLogo from './SiteLogo.astro'
+---
+<header>
+    <SiteLogo/>
+    <nav>
+        <a href="/#about-us">О нас</a>
+        <a href="/#work">Что мы делаем</a>
+        <a href="/#services">Услуги</a>
+        <a href="/#advantages">Преимущества</a>
+        <a href="/#portfolio">Портфолио</a>
+        <a href="/form">Связаться</a>
+    </nav>
+</header>
+
+<style>
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(10, 10, 10);
+        padding: 0.5rem;
+        position: sticky;
+        inset: 0;
+        bottom: auto;
+        z-index: 2;
+    }
+    nav {
+        display: flex;
+        gap: 2ch;
+    }
+    a {
+        color: white;
+    }
+</style>
